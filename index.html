@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chill Valley</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+  <div id="wrap">
+    <canvas id="game"></canvas>
+
+    <div id="hud">
+      <div class="panel" id="clock">
+        <div id="day">Day 1 · Spring</div>
+        <div id="time">6:00 AM</div>
+        <div id="weather">☀️ Sunny</div>
+      </div>
+      <div class="panel" id="stats">
+        <div id="gold">💰 100g</div>
+        <div class="bar"><span>Energy</span><div class="meter"><i id="energyFill"></i></div></div>
+        <div class="bar"><span>Water</span><div class="meter water"><i id="waterFill"></i></div></div>
+      </div>
+      <button id="musicBtn" title="Toggle music (M)">♪</button>
+    </div>
+
+    <div id="hint"></div>
+    <div id="hotbar"></div>
+    <div id="toasts"></div>
+
+    <div id="modal" class="hidden"><div class="card" id="modalCard"></div></div>
+
+    <div id="title">
+      <div class="title-card">
+        <h1>Chill Valley</h1>
+        <p class="tag">a cozy little farm at the edge of nowhere</p>
+        <div class="title-buttons">
+          <button id="btnContinue">Continue</button>
+          <button id="btnNew">New Farm</button>
+        </div>
+        <ul class="controls">
+          <li><kbd>WASD</kbd> / <kbd>←↑↓→</kbd> walk</li>
+          <li><kbd>E</kbd> / <kbd>Space</kbd> use · talk · harvest</li>
+          <li><kbd>1</kbd>–<kbd>4</kbd> tools · <kbd>Q</kbd> switch seeds</li>
+          <li><kbd>M</kbd> music · <kbd>Esc</kbd> close menus</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <script src="src/game.js"></script>
+</body>
+</html>
